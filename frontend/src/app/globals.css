@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #0b0c10;
+  --panel-bg: rgba(22, 27, 34, 0.6);
+  --panel-border: rgba(102, 252, 241, 0.15);
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --accent-color: #66fcf1;
+  --accent-hover: #45a29e;
+  --sidebar-bg: #0d1117;
+  --sidebar-hover: rgba(102, 252, 241, 0.1);
+  --glow: 0 4px 20px rgba(102, 252, 241, 0.3);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  /* Add a vibrant radial background highlight */
+  background-image: 
+    radial-gradient(circle at top right, rgba(69, 162, 158, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at bottom left, rgba(16, 24, 32, 0.8) 0%, transparent 50%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Base Layout Classes */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
