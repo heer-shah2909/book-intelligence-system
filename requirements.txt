@@ -1,0 +1,14 @@
+django  
+djangorestframework  
+pandas  
+numpy  
+scikit-learn  
+requests  
+beautifulsoup4  
+sentence-transformers  
+faiss-cpu  
+langchain  
+transformers  
+torch  
+openpyxl  
+python-dotenv  
