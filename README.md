@@ -7,12 +7,6 @@ This system allows users to interact with book content using natural language qu
 ---
 
 # Screenshots of the UI
-
-(Add 3–4 screenshots here after running the project)
-
-Create a folder named:
-
-screenshots/
 <img width="940" height="435" alt="image" src="https://github.com/user-attachments/assets/2e99d4ea-09b5-4cc0-8fa7-e4a0c0e36607" />
 <img width="940" height="429" alt="image" src="https://github.com/user-attachments/assets/c25a6c60-4bba-4173-a031-e09f2b8cf73a" />
 <img width="940" height="427" alt="image" src="https://github.com/user-attachments/assets/ea4d97d4-69eb-4300-939b-b4e8b55f57df" />
