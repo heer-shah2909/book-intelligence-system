@@ -20,24 +20,32 @@ This system allows users to interact with book content using natural language qu
 book-intelligence-system/
 
 backend/
-│
-├── library/
-├── config/
-├── manage.py
-└── db.sqlite3
+    library/
+    config/
+    manage.py
 
 frontend/
-│
-├── src/
-└── public/
+    src/
+    public/
+    package.json
 
+samples/
+    sample_questions.txt
+
+screenshots/
+    dashboard.png
+    ask_questions.png
+    smart_search.png
+    insights.png
+
+requirements.txt  
 README.md
 
 ---
 
-# Setup Instructions for Running the Application
+# Setup Instructions
 
-## Step 1: Clone Repository
+## Clone Repository
 
 git clone https://github.com/heer-shah2909/book-intelligence-system.git
 
@@ -45,182 +53,139 @@ cd book-intelligence-system
 
 ---
 
-## Step 2: Backend Setup (Django)
-
-Navigate to backend:
+## Backend Setup
 
 cd backend
 
-Install dependencies:
-
 pip install -r requirements.txt
-
-Run migrations:
 
 python manage.py migrate
 
-Start backend server:
-
 python manage.py runserver
 
-Backend will run at:
+Backend runs at:
 
 http://127.0.0.1:8000/
 
 ---
 
-## Step 3: Frontend Setup (Next.js)
-
-Navigate to frontend:
+## Frontend Setup
 
 cd frontend
 
-Install dependencies:
-
 npm install
-
-Start frontend server:
 
 npm run dev
 
-Frontend will run at:
+Frontend runs at:
 
 http://localhost:3000/
+
+Note: Start backend before frontend.
 
 ---
 
 # API Documentation
 
-The backend provides REST API endpoints to manage books, search content, and process user queries.
-
-## Base URL
+Base URL:
 
 http://127.0.0.1:8000/
 
-## Endpoints
-
-### Get All Books
+## Get All Books
 
 GET /api/books/
 
-Description:  
-Returns a list of all books stored in the system.
+Returns list of all books.
 
 ---
 
-### Search Books
+## Search Books
 
 GET /api/search/?query=keyword
 
-Description:  
-Searches book content based on a keyword or phrase.
+Searches books using keywords.
 
 Example:
 
-/api/search/?query=machine learning
+/api/search/?query=romance
 
 ---
 
-### Ask Question
+## Ask Question
 
 POST /api/query/
-
-Description:  
-Accepts a natural language question and returns an intelligent response.
 
 Request Body:
 
 {
-  "question": "What is artificial intelligence?"
+  "question": "What is the theme of Pride and Prejudice?"
 }
 
 Response:
 
 {
-  "answer": "Artificial Intelligence is the simulation of human intelligence by machines."
+  "answer": "Pride and Prejudice explores themes of love, social class, and relationships."
 }
 
 ---
 
-# Sample Questions and Answers
+## Generate Insights
 
-These are example queries that can be tested in the system.
+GET /api/insights/
 
-Question 1:  
-What is machine learning?
-
-Expected Output:  
-Returns a summary explaining machine learning concepts.
+Returns summarized insights about books.
 
 ---
 
-Question 2:  
-Find books related to artificial intelligence.
+# Sample Questions
 
-Expected Output:  
-Displays books that match artificial intelligence topics.
+Show all available books.
 
----
+Find books written by Jane Austen.
 
-Question 3:  
-Explain deep learning.
+Give a summary of "Pride and Prejudice".
 
-Expected Output:  
-Returns a detailed explanation from the stored book content.
+Search for books related to psychology.
 
 ---
 
-# Requirements File
+# Requirements
 
-Make sure the following file exists:
-
-backend/requirements.txt
-
-This file should contain all backend dependencies required to run the Django application.
-
-Example dependencies:
-
-Django  
+django  
 djangorestframework  
-requests  
+pandas  
 numpy  
-
-(Your actual requirements.txt should contain all installed packages.)
-
----
-
-# Sample Test Data
-
-Sample book data is stored in the database and used for testing search and question-answer functionality.
-
-Example test inputs:
-
-machine learning  
-artificial intelligence  
-data science  
-
-These can be used to verify search and response generation.
+scikit-learn  
+requests  
+beautifulsoup4  
+sentence-transformers  
+faiss-cpu  
+langchain  
+transformers  
+torch  
+openpyxl  
+python-dotenv  
 
 ---
 
-# How the System Works
+# System Workflow
 
-1. The user interacts with the frontend interface.
-2. The frontend sends requests to the Django backend.
-3. The backend processes search or query requests.
-4. The backend retrieves relevant data from stored books.
-5. The response is sent back to the frontend.
-6. The frontend displays the result to the user.
+1. User interacts with frontend interface.
+2. Frontend sends request to Django backend.
+3. Backend processes query or search request.
+4. Relevant book data is retrieved.
+5. Response is returned to frontend.
+6. Frontend displays results to user.
 
 ---
 
 # Notes
 
-- The backend is built using Django.
-- The frontend is built using Next.js.
-- Styling is implemented using standard CSS.
-- SQLite database is used for storing book data.
-- REST APIs handle communication between frontend and backend.
+Backend: Django  
+Frontend: Next.js  
+Styling: Tailwind CSS  
+Database: SQLite  
+Communication: REST APIs  
 
 ---
 
@@ -228,5 +193,5 @@ These can be used to verify search and response generation.
 
 Heer Shah
 
-GitHub:
+GitHub:  
 https://github.com/heer-shah2909
